@@ -1,5 +1,5 @@
 {% set name = "pyModbusTCP" %}
-{% set version = "0.1.8" %}
+{% set version = "0.1.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/sourceperl/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 9a23fdf68628dfa4e3f2156cb0996b255b2a3dced6b9fbcf21c4bb1870b72417
+  sha256: 833c42969b113de33d4f2b87190e9ba02123b085302b39659afecd76c967c85a
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -31,7 +31,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A simple Modbus/TCP client library for Python'
+  summary: A simple Modbus/TCP client library for Python
   description: |
     A simple Modbus/TCP client library for Python
   doc_url: http://pymodbustcp.readthedocs.io/
