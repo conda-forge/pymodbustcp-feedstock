@@ -1,5 +1,5 @@
 {% set name = "pyModbusTCP" %}
-{% set version = "0.1.9" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/sourceperl/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 833c42969b113de33d4f2b87190e9ba02123b085302b39659afecd76c967c85a
+  sha256: fa3d3d3ff727e9eb7fd1c4a6134a5401cef4f24d0181f662690e3454034829fd
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
